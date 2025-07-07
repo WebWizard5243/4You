@@ -1,0 +1,284 @@
+<html>
+ <head>
+  <title>
+   Services
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="serviceProvider_style.css">
+ </head>
+ <body>
+    <div class="main-content">
+        <div class="header">
+         <div id="logoContainer">
+             <img src="/pics/Logo.png" alt="Logo">
+             4You
+         </div>
+         <ul>
+          <li class = "invisibleNavbar">
+           <a href="/">
+            Home
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+          <li class = "highlightedNavbar">
+           <a href="/Services">
+            Services
+           </a>
+           <div class="navbarMiniLineEnabled"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            About&nbsp;Us
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            Discussions
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+         </ul>
+         <div id="navbarSubContainer">
+             <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+             <div class="menu-icon">
+             <i class="fas fa-bars">
+             </i>
+             </div>
+         </div>
+        </div>
+
+        <div class="dropdown">
+            <ul>
+                <li>Settings</li>
+                <li> <a href="/4You/Services_SPpage.html">Switch To Service Provider</a></li>
+            </ul>
+         </div>
+
+    <div class="sidebarOpener">></div>
+
+
+        <div id = "theSidebar" class="sidebarVisible">
+
+            <h1>
+             -
+            </h1>
+            <ul>
+             <li>
+              <a href="#">
+               Home
+              </a>
+             </li>
+             <li>
+                 <div class="sidebarLines"></div>
+             </li>
+             <li>
+              <a href="Services.html">
+               Services
+              </a>
+             </li>
+             <li>
+                 <div class="sidebarLines"></div>
+             </li>
+             <li>
+              <a href="#">
+               Reviews
+              </a>
+             </li>
+             <li>
+                 <div class="sidebarLines"></div>
+             </li>
+             <li>
+              <a href="#">
+               Settings
+              </a>
+             </li>
+             <li>
+                 <div class="sidebarLines"></div>
+             </li>
+            </ul>
+            <div class="user-info">
+             <div class="profileBox">
+             <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+             <p>
+              Username
+             </p>
+             </div>
+             <p id = profileDescription>
+                 4You Points: 0<br>Number of Bookings:  0<br>Most Booked Service:<br>N/A
+             </p>
+            </div>
+           <div class="premiumBox">
+             <p id="premiumHeading">Try Premium For Free</p>
+             <div>
+             <span id="premiumPrice">299/-</span>
+             <div id="strikeThrough"></div>
+             </div>
+             <p id="premiumPriceFree">0/-</p>
+             <div class="bottomRightContainer">Explore Benefits</div>
+           </div>
+         
+           </div>
+
+  <div class="content">
+    <% if(locals.providerDetails){ %>
+    <div class="subHeadingContainer">
+        <img src="" alt="">
+        <h1 id = "subHeading_SP_name">
+            <%= providerDetails?.companyname %>
+        </h1>
+        <h2 id = "stars">⭐⭐⭐⭐⭐</h2>
+    </div>
+
+    <div class="service_provider_info">
+        <p class = "service_provider_details">Details:  <%= providerDetails?.details %></p>
+        <p class="service_provider_location">Location:  <%= providerDetails?.location %>   </p>
+        <p class="service_provider_customersServed">Customers served on 4You: xx</p>
+        <p class="service_provider_expertise">Expertise:  <%= providerDetails?.expertise %></p>
+
+    </div>
+    <% } %>
+
+    <div class="packages">
+        <h1>Packages</h1>
+        <div class="packageContainer">
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus urna, et maximus.</p>
+                
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus urna, et maximus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus urna, et maximus.</p>
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+            <div class="packageCards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus urna, et maximus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis finibus.</p>
+                
+             <div class="bottomRightContainer_packages"><a href="/bookService">Book</a></div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h1>Reviews</h1>
+
+            <div class="rating_graph_container">
+                <div id="rating_graph_bar1" class = "rating_graph_bars">
+                    <div class="review_bar_fill" id = "review_bar_fill1"></div>
+                </div>
+                <div id="rating_graph_bar2" class = "rating_graph_bars">
+                    <div class="review_bar_fill" id = "review_bar_fill2"></div>
+                </div>
+                <div id="rating_graph_bar3" class = "rating_graph_bars">
+                    <div class="review_bar_fill" id = "review_bar_fill3"></div>
+                </div>
+                <div id="rating_graph_bar4" class = "rating_graph_bars">
+                    <div class="review_bar_fill" id = "review_bar_fill4"></div>
+                </div>
+                <div id="rating_graph_bar5" class = "rating_graph_bars">
+                    <div class="review_bar_fill" id = "review_bar_fill5"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="totalImageContainer">
+            <h2 id = "imagesHeading">Images:</h2>
+            <div class="imageContainer">
+                <div class="images"></div>
+                <div class="images"></div>
+                <div class="images"></div>
+            </div>
+            <span id = "filterHeading">Filter By:</span>
+            <select id="choices" name="choices">
+                <option value="option1">Relevance</option>
+                <option value="option2">Latest</option>
+                <option value="option3">Oldest</option>
+                <option value="option4">Top Ratings</option>
+                <option value="option4">Poor Ratings</option>
+              </select>
+
+             
+        </div>
+
+    </div>
+
+    <div class="reviewContainer">
+        <div class="review">
+            <div class="reviewSubClass">
+                <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+                <p class="name">
+                   Name 1
+                  </p>
+                   </div>
+                <div class="text">
+                 <p>
+                  Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+                 </p> 
+                </div>
+        </div>
+        <div class="review">
+    
+                <div class="reviewSubClass">
+                    <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+                    <p class="name">
+                       Name 2
+                      </p>
+                </div>
+                <div class="text">
+                    <p>
+                     Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+                    </p> 
+                   </div>
+        </div>
+        <div class="review">
+            <div class="reviewSubClass">
+         <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+         <p class="name">
+            Name 3
+           </p>
+            </div>
+         <div class="text">
+          <p>
+           Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+          </p> 
+         </div>
+        </div>
+
+  </div>
+
+<script src = /js/serviceProvider_script.js></script>
+
+ </body>
+</html>

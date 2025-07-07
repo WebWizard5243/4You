@@ -1,0 +1,184 @@
+<html>
+<head>
+    <title>Service Provider Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <link rel = "stylesheet" href = "ServiceProviderForm_style.css">
+</head>
+<body>
+
+    <div class="subHeadingContainer">
+        <h1>
+         Your Business Details
+        </h1>
+    </div>
+
+    <div class="sidebarOpener">></div>
+
+    
+
+    <div id = "theSidebar" class="sidebarVisible">
+  
+     <h1 id = subHeading2>
+      Your Card
+     </h1>
+
+     <div class="user-info">
+      <div class="profileBox">
+      <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+      <p id = "Username">
+       Username
+      </p>
+      </div>
+      <p id = profileDescription>
+        <p class = "profileText">4You Points: 0</p>
+        <p class = "profileText">Company name: XYZ</p>
+        <p class = "profileText">Expertise: Professional</p>
+        <p class = "profileText">Customers Served on 4u:  0</p>
+        <p class = "profileText">Most Booked Service: N/A</p>
+          <!-- 4You Points: 0<br>Company name: XYZ<br>Expertise: Professional<br>Customers Served on 4u:  0<br>Most Booked Service: N/A -->
+      <h2 id = ProfileRating>Rating: ⭐⭐⭐⭐⭐</h2>
+
+      </p>
+     </div>
+    <div class="premiumBox">
+      <p id="premiumHeading">Try Premium For Free</p>
+      <div>
+      <span id="premiumPrice">299/-</span>
+      <div id="strikeThrough"></div>
+      </div>
+      <p id="premiumPriceFree">0/-</p>
+      <div class="bottomRightContainer">Explore Benefits</div>
+    </div>
+  
+    </div>
+    <div class="main-content">
+     <div class="header">
+      <div id="logoContainer">
+          <img src="/pics/Logo.png" alt="Logo">
+          4You
+      </div>
+      <ul>
+       <!-- <li class = "highlightedNavbar">
+        <a href="#">
+         Home
+        </a>
+        <div class="navbarMiniLineEnabled"></div>
+       </li> -->
+       <li class = "highlightedNavbar">
+        <a href="/ServiceProvider">
+         Services
+        </a>
+        <div class="navbarMiniLineEnabled"></div>
+       </li>
+       <li class = "invisibleNavbar">
+        <a href="">
+         About&nbsp;Us
+        </a>
+        <div class="navbarMiniLine"></div>
+       </li>
+       <li class = "invisibleNavbar">
+        <a href="#">
+         Discussions
+        </a>
+        <div class="navbarMiniLine"></div>
+       </li>
+      </ul>
+      <div id="navbarSubContainer">
+          <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+          <div class="menu-icon">
+          <i class="fas fa-bars">
+          </i>
+          </div>
+      </div>
+     </div>
+
+
+     <div class="dropdown">
+        <ul>
+            <li>Settings</li>
+            <li> <a href="/4You/index.html">Switch To Consumer</a></li>
+        </ul>
+     </div>
+
+
+
+
+    
+    <div class="container">
+         <form action="/ServiceProvider" method="post">
+        <div class="form-group1">
+            <label>Company<br>Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" name="companyName" placeholder="<%= locals.error?  error : '' %> " required>
+        </div>
+        <div class="form-group1">
+            <label>Location &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" name="Location" required>
+        </div>  
+            <input type="hidden" value= "<%=locals.service %>" name="serviceProvided" readonly>
+        <div class="form-group1">
+            <label>Expertise &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" name="Expertise" required>
+        </div>
+        <div class="form-group1">
+            <label>Details&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <textarea name="Details" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Upload Images</label>
+            <div class="upload-images">
+                <div class="image-box">Workshop</div>
+                <div class="image-box">Tools</div>
+                <div class="image-box">Other</div>
+                <div class="image-box add-more"><i class="fas fa-plus"></i> Add More</div>
+            </div>
+        </div>
+        <button class="save-details" type="submit">Save Details</button>
+        <div class="form-group">
+        </div>
+        </form>
+        <div class="scheduleContainer">
+            <div class = "form-group">
+
+                <label>Screening guidelines</label>
+                <ul class = "guidelines">
+                    <li>Ensure you have a reliable internet connection to avoid disruptions during the screening call.<br><br></li>
+                    <li>Dress professionally, as you would for an in-person meeting.<br><br></li>
+                    <li>Keep digital copies of identity proof, certificates, and any work-related documents ready to share.<br><br></li>
+                    <li>Join the online meeting at least 5 minutes early to demonstrate professionalism.<br><br></li>
+                    <li>Speak clearly, maintain eye contact with the camera, and be polite and confident.<br><br></li>
+                    <li>Be ready to explain your services, pricing, and experience in detail.<br><br></li>
+                    <li>Be ready to showcase your previous work or client testimonials using screen sharing, your camera, or any other suitable method.<br><br></li>
+                    <li>Understand the website's terms, payment structure, and service expectations before the session.<br><br></li>
+                </ul>
+            </div>
+
+
+            <div class="schedule-screening">
+                <div class="form-group">
+                    <label>Schedule Screening <span>(Duration: 1-2 hours)</span></label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Date">
+                    <span>(Within a week)</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Time">
+                    <span>(Between 8AM-9PM IST)</span>
+                </div>
+                <button class="schedule-button">Schedule</button>
+            </div>
+    </div>
+    </div>
+
+    <script src = "ServiceProviderForm_script.js"></script>
+</body>
+</html>

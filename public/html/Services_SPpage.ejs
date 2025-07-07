@@ -1,0 +1,739 @@
+<html>
+ <head>
+  <title>
+   Services
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    @media screen and (min-width: 601px){
+
+        .fas{
+        user-select: none;
+    }
+    .fa-bars{
+        user-select: none;
+
+    }
+    .dropdown{
+        display: block;
+        background-color: var(--darkColor);
+        position: fixed;
+        top:10%;
+        right: 1%;
+        z-index: 50;
+        margin: auto;
+        padding: 0.4%;
+        height: 14%;
+        aspect-ratio: 20/9;
+        border-radius: 0.5rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        transform: scale(0);
+        transition: transform 0.1s ease;
+
+    }
+    .dropdown ul{
+        padding-left: 0;
+        padding: 0;
+    }
+    .dropdown li{
+        list-style: none;
+        margin-top: 3%;
+        padding: 2%;
+        background-color: var(--lightColor);
+        color: var(--darkColor);
+        font-weight: 600;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+    .dropdown li a{
+        text-decoration: none;
+        color: var(--darkColor);
+    }
+    .dropdown li:hover{
+        background-color: var(--primaryColor);
+        transition: background-color, 0.3s;
+    }
+    .dropdown li:active{
+        background-color: var(--lightColor);
+
+    }
+
+
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            --primaryColor: #63DDFF;
+            --lightColor: #D7F4FC;
+            --darkColor: #27788E;
+
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+
+        .main-content {
+            /* padding: 20px; */
+            margin-right: 0;
+            margin-top: 0;
+            padding: 0px;
+            
+        }
+        .main-content .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primaryColor);
+            /* border-radius: 10px; */
+            height: 3.3vw;
+            width: 100%;
+
+            position: fixed;
+            color: white;
+            background-color: var(--primaryColor);
+            left: 0px;
+            z-index: 20;
+            margin-left: 0%;
+            margin-right: 0%;
+            padding: 0.7%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            top:0;
+
+        }
+        #logoContainer{
+            width: 12vw;
+            font-weight: 600;
+            font-size: 2.8vw;
+            display: flex;
+            gap: 3%;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #logoContainer img{
+            width: 4.5vw;
+        }
+
+        .main-content .header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin-bottom: -5px;
+            margin-left: -5%;
+
+        }
+        .highlightedNavbar{
+            margin-right: 1vw;
+            background-color: var(--lightColor);
+            padding: 3%;
+            padding-top: 3.2%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+        }
+        .invisibleNavbar{
+            margin-right: 1vw;
+            /* background-color: var(--lightColor); */
+            padding: 3%;
+            padding-top: 3.2%;
+            padding-bottom: 0.5%;
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+            transition: background-color 0.3s;
+
+        }
+
+        .invisibleNavbar:hover{
+            
+            background-color: rgb(198, 239, 255);
+            transition: background-color 0.3s;
+            
+        }
+
+        .navbarMiniLineEnabled{
+            width: 100%;
+            height: 8%;
+            background-color: var(--primaryColor);
+        }
+
+        .main-content .header ul li a {
+            
+            font-weight: 400;
+            color: var(--darkColor);
+            text-decoration: none;
+            font-size: 1.5vw;
+        }
+        .main-content .header .menu-icon {
+            font-size: 24px;
+            transform: scale(1.4);
+            align-self: center;
+            cursor: pointer;
+            border-radius: 1000px;
+        }
+
+        #navbarSubContainer{
+            margin-right: -1.5%;
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            width: 10vw;
+            color: var(--darkColor);
+        }
+
+        #navbarSubContainer img{
+            border-radius: 50%;
+            width: 35%;
+            height: 35%;
+        }
+
+
+
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: fixed;
+            top: 5.5vw;
+            right: 0;
+            z-index: 6;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            border: none;
+            background-color: var(--darkColor);
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+
+        }
+        .search-bar input[type="submit"]:hover{
+            background-color: #333;
+            transform: scale(1.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .content {
+            padding: 0px;
+            margin-top: 9vw;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, white 0%, rgb(215, 244, 252) 100%);
+        }
+        .subHeadingContainer{
+            position:fixed;
+            background-color: var(--lightColor);
+            width: 100%;
+            padding: 0%;
+            margin-left: 0;
+            top: 4.7vw;
+            z-index: 5;
+        }
+        .content h1 {
+            font-size: 200%;
+            color: #333;
+            display: block;
+            font-weight: 700;
+            background-color: var(--lightColor);
+            color: var(--darkColor);
+            padding: 1%;
+            margin: 0%;
+            
+        }
+        .services {
+            
+            padding-top: 3vw;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3%;
+        }
+        .service-card {
+            background-color: var(--primaryColor);
+            /* border-radius: 10px; */
+            border-radius: 5% / 5%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            aspect-ratio: 1/0.8;
+            /* text-align: center; */
+            padding: 0;
+            margin-bottom: 3%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            cursor: pointer;
+            transition: transform 0.7s;
+            z-index: 1;
+
+        }
+        .service-card:hover{
+            transform: scale(1.07);
+            transition: transform 0.2s;
+            z-index: auto;
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1/0.6;
+            border-radius: 5% 5% 12% 0%;
+            border-bottom-right-radius: 15% 18%;
+        }
+        .service-card .service-name {
+            color: white;
+            /* padding: 7%; */
+            font-size: 180%;
+            padding-top: 1.5%;
+            padding-left: 5%;
+            padding-bottom: 9%;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    @media screen and (min-device-width: 0px) and (max-device-width: 600px){
+
+
+        .fas{
+        user-select: none;
+    }
+    .fa-bars{
+        user-select: none;
+
+    }
+    .dropdown{
+        display: block;
+        background-color: var(--darkColor);
+        position: fixed;
+        top:5%;
+        right: 1%;
+        z-index: 50;
+        margin: auto;
+        padding: 1%;
+        height: 14%;
+        aspect-ratio: 16/9;
+        border-radius: 0.5rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        transform: scale(0);
+        transition: transform 0.1s ease;
+
+    }
+    .dropdown ul{
+        padding-left: 0;
+        padding: 0;
+    }
+    .dropdown li{
+        list-style: none;
+        margin-top: 3%;
+        padding: 2%;
+        background-color: var(--lightColor);
+        color: var(--darkColor);
+        font-weight: 600;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+    .dropdown li a{
+        text-decoration: none;
+        color: var(--darkColor);
+    }
+    .dropdown li:hover{
+        background-color: var(--primaryColor);
+        transition: background-color, 0.3s;
+    }
+    .dropdown li:active{
+        background-color: var(--lightColor);
+
+    }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            --primaryColor: #63DDFF;
+            --lightColor: #D7F4FC;
+            --darkColor: #27788E;
+
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+
+        .main-content {
+            margin-left: 0%;
+            /* padding: 20px; */
+            margin-right: 0;
+            padding: 0px;
+            margin: 0;
+            
+            
+        }
+        .main-content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+    /* border-radius: 10px; */
+    height: 8vw;
+    width: 100vw;
+
+    color: white;
+    background-color: var(--primaryColor);
+    left: 0px;
+    z-index: 20;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0.7%;
+    box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+    position: fixed;
+    top: 0;
+}
+#logoContainer{
+    width: 10vw;
+    font-weight: 600;
+    font-size: 4vw;
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#logoContainer img{
+    width: 30px;
+}
+
+.main-content .header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0px;
+    margin-left: 2%;
+
+}
+.highlightedNavbar{
+    margin-right: 0.5vw;
+    background-color: var(--lightColor);
+    padding: 1.5%;
+    padding-top: 2.5%;
+    padding-bottom: 0.5%;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+.invisibleNavbar{
+    margin-right: 0.5vw;
+    /* background-color: var(--lightColor); */
+    padding: 1.5%;
+    padding-top: 2.5%;
+    padding-bottom: 0.5%;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    transition: background-color 0.3s;
+
+}
+
+.invisibleNavbar:hover{
+    
+    background-color: rgb(198, 239, 255);
+    transition: background-color 0.3s;
+    
+}
+
+.navbarMiniLineEnabled{
+    width: 100%;
+    height: 8%;
+    background-color: var(--primaryColor);
+}
+
+.main-content .header ul li a {
+    
+    font-weight: 400;
+    color: var(--darkColor);
+    text-decoration: none;
+    font-size: 3vw;
+}
+.main-content .header .menu-icon {
+    font-size: 24px;
+    transform: scale(1.4);
+    align-self: center;
+    cursor: pointer;
+    border-radius: 1000px;
+}
+
+#navbarSubContainer{
+    margin-right: 4%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    width: 15vw;
+    color: var(--darkColor);
+}
+#navbarSubContainer i{
+    transform: scale(0.7);
+}
+
+#navbarSubContainer img{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+
+
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px 10px;
+            position: fixed;
+            top: 10.3vw;
+            right: 0;
+            z-index: 6;
+            
+        }
+        .search-bar input[type="text"] {
+            width: 50%;
+            padding: 2px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 7px;
+            font-size: 0.5rem;
+            border: none;
+            background-color: var(--darkColor);
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+
+        }
+        .search-bar input[type="submit"]:hover{
+            background-color: #333;
+            transform: scale(1.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .content {
+            padding: 0px;
+            margin-top: 14vw;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, white 0%, rgb(215, 244, 252) 100%);
+        }
+        .subHeadingContainer{
+            position:fixed;
+            background-color: var(--lightColor);
+            width: 100%;
+            padding: 0%;
+            margin-left: 0;
+            top: 8vw;
+            z-index: 5;
+        }
+        .content h1 {
+            font-size: 75%;
+            color: #333;
+            display: block;
+            font-weight: 700;
+            background-color: var(--lightColor);
+            color: var(--darkColor);
+            padding: 1%;
+            padding-bottom: 0.5%;
+            padding-top: 3.5%;
+            margin: 0%;
+            margin-left: 3%;
+            
+        }
+        .services {
+            padding-top: 10vw;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7%;
+        }
+        .service-card {
+            background-color: var(--primaryColor);
+            /* border-radius: 5%; */
+            border-radius: 5%;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            width: 40%;
+            aspect-ratio: 1/0.8;
+            /* text-align: center; */
+            padding: 0;
+            margin-bottom: 7%;
+            box-shadow: -2px 2px 5px rgba(7, 63, 88, 0.253);
+            cursor: pointer;
+            transition: transform 0.7s;
+            z-index: 1;
+
+        }
+        .service-card:hover{
+            transform: scale(1.07);
+            transition: transform 0.2s;
+            z-index: auto;
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1/0.6;
+            border-radius: 5% 5% 20% 0%;
+            border-bottom-right-radius: 15% 18%;
+
+        }
+        .service-card .service-name {
+            color: white;
+            /* padding: 7%; */
+            font-size: 110%;
+            padding-top: 1.5%;
+            padding-left: 5%;
+            padding-bottom: 9%;
+            border-radius: 0 0 10px 10px;
+        }
+
+    }
+
+
+        
+
+  </style>
+ </head>
+ <body>
+    <div class="main-content">
+        <div class="header">
+         <div id="logoContainer">
+             <img src="/pics/Logo.png" alt="Logo">
+             4You
+         </div>
+         <ul>
+          <!-- <li class = "invisibleNavbar">
+           <a href="/4You/index.html">
+            Home
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li> -->
+          <li class = "highlightedNavbar">
+           <a href="#">
+            Services
+           </a>
+           <div class="navbarMiniLineEnabled"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            About&nbsp;Us
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+          <li class = "invisibleNavbar">
+           <a href="#">
+            Discussions
+           </a>
+           <div class="navbarMiniLine"></div>
+          </li>
+         </ul>
+         <div id="navbarSubContainer">
+             <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+             <div class="menu-icon">
+             <i class="fas fa-bars">
+             </i>
+             </div>
+         </div>
+        </div>
+
+        <div class="dropdown">
+            <ul>
+                <li>Settings</li>
+                <li> <a href="/">Switch To Consumer</a></li>
+            </ul>
+         </div>
+
+  <div class="content">
+    <div class="search-bar">
+        <input placeholder="Search" type="text"/>
+        <input type="submit" value="Search"/>
+    </div>
+    <div class="subHeadingContainer">
+   <h1>
+    What service will you provide?
+   </h1>
+    </div>
+   <div class="services">
+    <div class="service-card">
+     <img alt="Plumbing service image"  src="Services_pics/plumbing.jfif" width="200"/>
+     <div class="service-name" data-name="plumbing">
+      Plumber
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Repair service image"  src="Services_pics/repair.jfif" width="200"/>
+     <div class="service-name" data-name="Appliance Repair">
+      Appliance Repair
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Carpentry service image"  src="Services_pics/carpenter.jfif" width="200"/>
+     <div class="service-name" data-name="Carpentry">
+      Carpentry
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Nanny service image"  src="Services_pics/babysitter.jfif" width="200"/>
+     <div class="service-name" data-name="Nanny">
+      Nanny
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Beauty & Spa service image"  src="Services_pics/beauty.jfif" width="200"/>
+     <div class="service-name" data-name="Beauty & Spa">
+      Beauty & Spa
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Babysitter service image"  src="Services_pics/babysitter.jfif" width="200"/>
+     <div class="service-name" data-name="Babysitter">
+      Babysitter
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Cook service image"  src="Services_pics/cooking.jfif" width="200"/>
+     <div class="service-name" data-name="Cook">
+      Cook
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Maid service image"  src="Services_pics/maid.jfif" width="200"/>
+     <div class="service-name" data-name="Maid">
+      Maid
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src = "/js/Services_SPpage_script.js"></script>
+ </body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+
+ <head>
+  <title>
+   Web Page
+  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="workplace.css">
+ </head>
+ <body>
+
+  <div class="main-content">
+   <div class="header">
+    <div id="logoContainer">
+        <img src="/pics/Logo.png" alt="Logo">
+        4You
+    </div>
+    <ul>
+     <li class = "invisibleNavbar">
+      <a href="/">
+       Home
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+     <li class = "highlightedNavbar">
+      <a href="/4You/Services.html">
+       Services
+      </a>
+      <div class="navbarMiniLineEnabled"></div>
+     </li>
+     <li class = "invisibleNavbar">
+      <a href="/4You/serviceProvider.html">
+       About&nbsp;Us
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+     <li class = "invisibleNavbar">
+      <a href="#">
+       Discussions
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+    </ul>
+    <div id="navbarSubContainer">
+        <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+        <div class="menu-icon">
+        <i class="fas fa-bars">
+        </i>
+        </div>
+    </div>
+   </div> 
+
+   <div class="dropdown">
+    <ul>
+        <li>Settings</li>
+        <li> <a href="/ServiceProvider">Switch To Service Provider</a></li>
+    </ul>
+ </div>
+
+   <div class="sidebarOpener">></div>
+
+
+   <div class="sub-heading">
+    <div class="left">
+      <!-- <span class="sideMenu" onclick="openNav()">&#9776;</span> -->
+    <!-- <button class="go-back" > < </button> -->
+    <h3 id = "subHeading"><%= locals.service %></h3>
+  </div>
+    
+    <form class="search-bar">
+         <input class="search-box" type="text" placeholder="Search">
+         <input class="search-btn" type="submit" value="🔍">
+    </form>
+   </div>
+   <div id="mySidenav">
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+   <div class="sort sidebarVisible">
+    <div class="sort-bar">
+      <h3> Sort By :</h3>
+      <select name="" id="sort">
+        <option value="">Relevance</option>
+        <option value="">Distance</option>
+        <option value="">Rating</option>
+        <option value="">Price</option>
+
+      </select>
+    <select name="" id="sort2">
+      <option value="">Low to High</option>
+      <option value=""> High to Low</option>
+    </select>
+  </div>
+  <div class="filter">
+    <h3>Apply Filters :</h3>
+    <div class="apply-filter">
+      <button  class="filter-btn" >Urgent</button>
+      <button class="filter-btn" >Verified</button>
+      <button class="filter-btn" >Experienced</button>
+      <button class="filter-btn" >Nearby</button>
+      <button class="filter-btn" >Popular</button>
+      <button class="filter-btn" >Certified</button>
+
+    </div>
+  </div>
+  <div class="filter-section">
+    <h3>Price Range:</h3>
+    <div class="price-range">
+      <input type="number" class="price-input" placeholder="0/-" min="0" />
+      <span>-</span>
+      <input
+        type="number"
+        class="price-input"
+        placeholder="1000/-"
+        max="1000"
+      />
+    </div>
+  </div>
+   </div> 
+   </div>
+  
+   <div class="providers-list" id="providers-container">
+     <% if(locals.serviceProviders){ %>
+    <% for( let i = 0; i< serviceProviders.length; i++ ){ %>
+  <div class="provider-card" data-id="<%=serviceProviders[i].id %>">
+    <div class="provider-info">
+      <div class="provider-name"><%=serviceProviders[i].companyname %> </div>
+
+      <div class="provider-details">
+       <%= serviceProviders[i].details %>
+      </div>
+
+      <div class="rating">
+        ★★★★☆ 
+      </div>
+
+      <div class="charges">
+        Charges: 500/- to 1500/-
+      </div>
+    </div>
+
+    <div class="image-card">
+    </div>
+  </div>
+  <% } %>
+<% } else { %>
+  <h4><%= locals.error %></h4>
+  <% } %>
+</div>
+
+   </div>
+  <script src="/js/workPlace.js"></script>
+</body>
+</html>

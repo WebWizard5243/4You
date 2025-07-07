@@ -1,0 +1,244 @@
+<html>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+
+ <head>
+  <title>
+   Web Page
+  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="index_style.css">
+ </head>
+ <body>
+
+    <div class="sidebarOpener">></div>
+
+  <div id = "theSidebar" class="sidebarVisible">
+
+   <h1>
+    -
+   </h1>
+   <ul>
+    <li>
+     <a href="#">
+      Home
+     </a>
+    </li>
+    <li>
+        <div class="sidebarLines"></div>
+    </li>
+    <li>
+     <a href="/Services">
+      Services
+     </a>
+    </li>
+    <li>
+        <div class="sidebarLines"></div>
+    </li>
+    <li>
+     <a href="#">
+      Reviews
+     </a>
+    </li>
+    <li>
+        <div class="sidebarLines"></div>
+    </li>
+    <li>
+     <a href="#">
+      Settings
+     </a>
+    </li>
+    <li>
+        <div class="sidebarLines"></div>
+    </li>
+   </ul>
+   <div class="user-info">
+    <div class="profileBox">
+    <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50"/>
+    <p>
+     Username
+    </p>
+    </div>
+    <p id = profileDescription>
+        4You Points: 0<br>Number of Bookings:  0<br>Most Booked Service:<br>N/A
+    </p>
+   </div>
+  <div class="premiumBox">
+    <p id="premiumHeading">Try Premium For Free</p>
+    <div>
+    <span id="premiumPrice">299/-</span>
+    <div id="strikeThrough"></div>
+    </div>
+    <p id="premiumPriceFree">0/-</p>
+    <div class="bottomRightContainer">Explore Benefits</div>
+  </div>
+
+  </div>
+  <div class="main-content">
+   <div class="header">
+    <div id="logoContainer">
+        <img src="/pics/Logo.png" alt="Logo">
+        4You
+    </div>
+    <ul>
+     <li class = "highlightedNavbar">
+      <a href="#">
+       Home
+      </a>
+      <div class="navbarMiniLineEnabled"></div>
+     </li>
+     <li class = "invisibleNavbar">
+      <a href="/Services">
+       Services
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+     <li class = "invisibleNavbar">
+      <a href="#">
+       About&nbsp;Us
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+     <li class = "invisibleNavbar">
+      <a href="#">
+       Discussions
+      </a>
+      <div class="navbarMiniLine"></div>
+     </li>
+    </ul>
+    <div id="navbarSubContainer">
+        <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/zW15Qj0oLHLVNpf4BNAgrwNelifZtd4YLi9WNTXigxFEtginA.jpg" width="50" class= "signUpPic"/>
+        <div class="menu-icon">
+        <i class="fas fa-bars">
+        </i>
+        </div>
+    </div>
+   </div>
+
+   <div class="dropdown">
+    <ul>
+        <li>Settings</li>
+        <li> <a href="/ServiceProvider">Switch To Service Provider</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+ </div>
+   <div id="prev">
+    <h1 style = "margin: 0px;"><</h1>
+    <p style = "margin: -2px;">Prev</p>
+   </div>
+    <div id="next">
+        <h1 style = "margin: 0px;">></h1>
+        <p style = "margin: -2px;">Next</p>
+    </div>
+<div class="slideshow-wrapper">
+   <div class="slideShow">
+    
+    <div class="SSimage" id = "SSimg1"></div>
+    <div class="SSimage" id = "SSimg2"></div>
+    <div class="SSimage" id = "SSimg3"></div>
+    <div class="SSimage" id = "SSimg4"></div>
+   </div>
+</div>
+   <div class="sections">
+    <div class="section">
+     <h2>
+      Most Popular Services
+     </h2>
+     <div class="grid">
+      <div class="item" data-name="Appliance Repair">
+       <img alt="Repair service image" class="img-box"  src="/Services_pics/repair.jfif" width="154" height="154"/>
+      </div>
+      <div class="item" data-name="Carpentary">
+        <img alt="Carpentry service image" class="img-box"  src="/Services_pics/carpenter.jfif" width="154" height="154"/>
+      </div>
+      <div class="item" data-name="Babysitter">
+          <img alt="Babysitter service image" class="img-box" src="/Services_pics/babysitter.jfif" width="154" height="154"/>
+      </div>
+      <div class="item" data-name="Maid">
+         <img alt="Maid service image" class="img-box" src="/Services_pics/maid.jfif" width="154" height="154"/>
+      </div>
+     </div>
+     <a class="explore" href="/Services">
+      Explore All Services ->
+     </a>
+    </div>
+    <div id="flexbox2">
+    <div class="container2">
+        <h2 id= "whatsNew">What's New</h2>
+        <div class="section2"></div>
+    </div>
+    <div class="section3">
+     <h2>
+      Your Past Bookings
+     </h2>
+     <div class="grid">
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+    </div>
+     </div>
+</div>
+
+    </div>
+   </div>
+
+
+   <div class="reviews">
+   <div class="transitionGradient"></div>
+   <div class="reviewContainer">
+
+    <h2>
+     Reviews
+    </h2>
+    <div class="review">
+        <div class="reviewSubClass">
+            <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+            <p class="name">
+               Name 1
+              </p>
+               </div>
+            <div class="text">
+             <p>
+              Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+             </p> 
+            </div>
+    </div>
+    <div class="review2">
+        
+            <div class="text">
+             <p>
+              Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+             </p> 
+            </div>
+
+            <div class="reviewSubClass2">
+                <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+                <p class="name">
+                   Name 2
+                  </p>
+            </div>
+    </div>
+    <div class="review">
+        <div class="reviewSubClass">
+     <img alt="Reviewer profile picture" src="https://storage.googleapis.com/a1aa/image/ae2i9URQKm0e500x5B72MO4X1yWo3eSefSwxVZRTWeNIpFU8E.jpg"/>
+     <p class="name">
+        Name 3
+       </p>
+        </div>
+     <div class="text">
+      <p>
+       Lorem ipsum ghum inor ghat ciat kyun morel kaysuki umore kiso kisuake umor sit, mori kasa yaka un utsuke.
+      </p> 
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+<script src = "/js/index_script.js" ></script>
+ </body>
+</html>
