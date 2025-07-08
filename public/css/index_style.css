@@ -191,8 +191,12 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-.img-box{
-    border-radius:10px ;
+.img-box {
+  width: 100%;
+  max-width: 154px;
+  height: 100%;
+  max-height: 154px;
+  border-radius: 10px;
 }
 .sidebarOpener{
     display: none;
@@ -929,6 +933,13 @@ body {
         font-size: 70%;
 
     }
+    .img-box {
+  width: 100%;
+  max-width: 68px;
+  height: 100%;
+  max-height: 68px;
+  border-radius: 10px;
+}
     .x{
         position: fixed;
         text-align: right;
