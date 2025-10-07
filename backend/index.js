@@ -242,7 +242,7 @@ app.post("/serviceProvider",async(req,res) => {
 passport.use("google", new GoogleStrategy({
     clientID : process.env.GOOGLE_CLIENT_ID,
     clientSecret : process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL : "https://fouryou-0vrf.onrender.com//auth/google/callback",
+    callbackURL : "https://fouryou-0vrf.onrender.com/auth/google/callback",
     userProfileURL : "https://www.googleapis.com/oauth2/v3/userinfo"
 }, async (accessToken, refreshToken, profile, cb) => {
   console.log(profile); 
